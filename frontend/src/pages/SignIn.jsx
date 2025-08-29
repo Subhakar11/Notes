@@ -50,7 +50,7 @@ export default function SignIn() {
       window.google.accounts.id.initialize({
         client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
         callback: async (resp) => {
-          const r = await fetch((import.meta.env.VITE_API_BASE || 'http://localhost:3002/api') + '/auth/google', {
+          const r = await fetch((import.meta.env.VITE_API_BASE ) + '/auth/google', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ idToken: resp.credential })
