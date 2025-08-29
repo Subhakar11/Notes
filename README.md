@@ -3,7 +3,7 @@
 A complete README for the Notey project — a mobile-friendly note-taking application with email+OTP and Google signup/login, JWT-protected notes, and  React frontend + Node backend.
 Troubleshooting & FAQ
 
-##Project Overview
+## Project Overview.
 
 Notey is a note-taking app that replicates the provided front-end design (assets available at the provided link) and implements:
 Signup with Email + OTP or Google account
@@ -13,7 +13,7 @@ Mobile-first responsive UI (React + TypeScript)
 Backend in Node.js — sample uses Express
 MongoDB as the default example DB 
 
-##Features
+## Features
 Signup: Email + OTP OR Google OAuth 2.0.
 Login: Email + OTP verification or Google (if user registered via Google).
 User profile / welcome page after login.
@@ -22,21 +22,21 @@ Proper form validation and descriptive error messages.
 Token-based API guarding (access token = JWT).
 Mobile-first responsive UI designed to match the provided design assets.
 
-##Tech Stack
+## Tech Stack
 Frontend: React (TypeScript). (React docs / Quick start recommended.) 
 React
 Backend: Node.js + Express (TypeScript). 
 Express.js
 Auth: Google OAuth 2.0 (for Google sign-in) and custom email + OTP using an email provider (Nodemailer or transactional email service). 
-Google for Developers
-Nodemailer
+Google for Developers.
+Nodemailer.
 JWT: jsonwebtoken for issuing/verifying access tokens. 
 Password hashing: bcrypt / bcryptjs.
 Database: MongoDB (Atlas recommended quickstart). 
-MongoDB
+MongoDB.
 Deployment:  Render.
 
-## Architecture & Data Flow
+## Architecture & Data Flow.
 Frontend (React) provides signup/login screens.
 For email signup: frontend calls POST /auth/request-otp → backend generates and stores an OTP (short-lived, hashed), sends it by email.
 For OTP verification: frontend calls POST /auth/verify-otp → backend verifies OTP and issues JWT (access token).
@@ -52,7 +52,7 @@ Git
 MongoDB Atlas account (or local MongoDB)
 Google Cloud Console project & OAuth credentials (for Google sign-in)
 SMTP credentials (for sending OTP emails) — use Gmail SMTP, Sendgrid, Mailgun, or Mailtrap for dev. (Nodemailer recommended.)
-git clone https://github.com/yourusername/notey.git
+git clone https://github.com/subhakar11/Notes.git
 cd Notes
 
 Environment variables
@@ -76,12 +76,12 @@ frontend/.env (example)
 VITE_API_URL=http://localhost:4000
 VITE_GOOGLE_CLIENT_ID=your-google-client-id.apps.googleusercontent.com
 
-##Backend — Setup & run
+## Backend — Setup & run
 cd backend
 npm install
 npm start
 
-##Frontend — Setup & run
+## Frontend — Setup & run
 cd frontend
 npm install
 npm run dev
